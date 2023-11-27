@@ -1,23 +1,17 @@
-def draw_tapis_diagonale_reverse(n):
-    for i in range(n + 1):
-        for j in range(n + 1):
-            if i == n - j:
-                print('', end=' ')
-            else:
-                print('#', end=' ')
-        print()
+def draw_rectangle(width=0, height=0):
+    if width == 0 or height == 0:
+        print(" ⚠️   ERREUR : Veuillez entrer une largeur et une hauteur non nulles.")
+    else:
+        print(f"largeur : {width}")
+        print(f"hauteur : {height}")
 
-# Exemple d'utilisation avec n=10
-draw_tapis_diagonale_reverse(10)
-print("+--------+")
-print("######### ")
-print("########  ")
-print("#######   ")
-print("######    ")
-print("#####     ")
-print("####      ")
-print("###       ")
-print("##        ")
-print("#         ")
-print("+---------")
+        print('|' + '-' * (width - 2) + '|')
+        for _ in range(height - 2):
+            print('|' + ' ' * (width - 2) + '|')
+        print('|' + '-' * (width - 2) + '|')
 
+# Exemple d'utilisation avec une largeur de 5 et une hauteur de 3
+draw_rectangle(5, 3)
+
+
+draw_rectangle(10, 3)

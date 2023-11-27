@@ -1,9 +1,7 @@
-def draw_rectangle(height = 0):
-
-    try:
-        if height == 0:
-            raise ValueError()
-        
+def draw_rectangle(height=0):
+    if height == 0:
+        print(" ⚠️   ERREUR : Veuillez entrer une hauteur non nulle.")
+    else:
         print(f"hauteur : {height} \n")
 
         for i in range(height):
@@ -12,7 +10,7 @@ def draw_rectangle(height = 0):
                 print('/' + '_' * (2 * i) + '\\')
             else:
                 print(' ' * (height - i - 1) + '/' + ' ' * (2 * i) + '\\')
-    except:
-        print(" ⚠️   ", "ERREUR : Veuillez rentrer votre une largeur puis une hauteur.")
 
+# Exemple d'utilisation avec une hauteur de 5
 draw_rectangle(5)
+
